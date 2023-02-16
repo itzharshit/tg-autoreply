@@ -19,6 +19,10 @@ if __name__ == '__main__':
 
 try:
     client.start()
+    try:
+        await client.send_message('me', 'Hello to myself!')
+    except:
+        print(failed to start)
 except BaseException:
     print("Userbot Error ! Have you added a STRING_SESSION in deploying??")
     sys.exit(1)
