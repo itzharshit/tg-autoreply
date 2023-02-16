@@ -1,4 +1,5 @@
 import time
+import telethon 
 from telethon import TelegramClient, events
 import re
 import sys
