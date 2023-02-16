@@ -17,6 +17,11 @@ if __name__ == '__main__':
     # use sequential_updates=True to respond to messages one at a time
     client  = TelegramClient(StringSession(string), api_id, api_hash)
 
+try:
+    client.start()
+except BaseException:
+    print("Userbot Error ! Have you added a STRING_SESSION in deploying??")
+    sys.exit(1)
 
     @client.on(events.NewMessage(incoming=True)) #handle only incoming messages
     async def handle_new_message(event):
@@ -41,5 +46,8 @@ if __name__ == '__main__':
     
     
     print(time.asctime(), '-', 'Auto-replying turned on for you...') # start client istance
-    client.run_until_disconnected() #run auto reply until disconnected 
+    try:
+        client.run_until_disconnected() #run auto reply until disconnected 
+    except:
+        pass
     print(time.asctime(), '-', 'Stopped Auto-reply')
