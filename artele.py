@@ -1,13 +1,17 @@
 import time
 from telethon import TelegramClient, events
+import re
+import sys
+from os import getenv
 
+from dotenv import load_dotenv
 # this is secret, do not share with anyone
 api_id = 14456079
 api_hash = '51da94efc990b58e3db3c897fc24e8d6'
-string =''
+string = getenv("STRING")
  #this is where your session data will persist. You can name the file anything you want.
-
-message = '**AUTO REPLY** \n\nHey baby!!\n\nSorry Im not answering private msgs right now but I have everything you need. So if youre looking for a sexy fun time, I can provide it. Come & join me at my website, get my exclusive naughty content & lets chat 1-on-1 together.\n\nSee you there,\n-elly xoxo\n\n https://elly.onepage.me \n\n**AUTO REPLY**'
+phone = '+61482091907'
+message = '**Hello sir, this is a auto replied message. I am currently offline.**\n\nIf you want to know the price of premium save restricted contents bot, you can check it below\n\n✓1 Week - 6$(USD)\n✓ 1 Month - $13(USD) \nPayment mode is any crypto (BTC __preferable__)\n\nIf you want to subscribe premium feature you can reply otherwise you are free from here.'
 
 if __name__ == '__main__':
     #Create the client
