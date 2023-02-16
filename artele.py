@@ -22,7 +22,7 @@ try:
     try:
         await client.send_message('me', 'Hello to myself!')
     except:
-        print(failed to start)
+        print("failed to start")
 except BaseException:
     print("Userbot Error ! Have you added a STRING_SESSION in deploying??")
     sys.exit(1)
@@ -38,7 +38,7 @@ except BaseException:
             if isinstance(me_.status, telethon.tl.types.UserStatusOffline):
                 await event.respond(message)
             else:
-                print(passed)
+                print("passed")
 
     # Function to get all the open/current dialogs
     def setup():
