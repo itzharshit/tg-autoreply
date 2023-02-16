@@ -41,6 +41,5 @@ if __name__ == '__main__':
     
     
     print(time.asctime(), '-', 'Auto-replying turned on for you...') # start client istance
-    setup()
     client.run_until_disconnected() #run auto reply until disconnected 
     print(time.asctime(), '-', 'Stopped Auto-reply')
