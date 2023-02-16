@@ -22,8 +22,12 @@ if __name__ == '__main__':
             print(from_)
             print(time.asctime(), '-',  event.message)
             time.sleep(30)
-            await event.respond(message)
-    
+            me_ = await client.get_me()
+            if isinstance(me_.status, telethon.tl.types.UserStatusOffline):
+                await event.respond(message)
+            else:
+                print(passed)
+
     # Function to get all the open/current dialogs
     def setup():
         users = set()
