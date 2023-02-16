@@ -1,5 +1,5 @@
 import time
-from telethon import TelegramClient, events
+from telethon import TelegramClient, events, StringSession
 import re
 import sys
 from os import getenv
