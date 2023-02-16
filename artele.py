@@ -4,7 +4,6 @@ import re
 import sys
 from os import getenv
 
-from dotenv import load_dotenv
 # this is secret, do not share with anyone
 api_id = 14456079
 api_hash = '51da94efc990b58e3db3c897fc24e8d6'
